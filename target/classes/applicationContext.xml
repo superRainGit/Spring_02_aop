@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<!-- 配置自动扫描的包 -->
+	<context:component-scan base-package="cn.zhang.aop.impl"></context:component-scan>
+	
+	<!-- 
+		配置Spring IOC容器自动识别@Aspect注解 
+		自动的为代理的类 生成动态代理
+	-->
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+</beans>
